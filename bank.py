@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS accounts(
 """)
 conn.commit()
 
+
 def create_account():
     name = input("Enter Account Holder Name: ")
     balance = float(input("Enter Initial Deposit: "))
