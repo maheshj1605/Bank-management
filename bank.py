@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS accounts(
 conn.commit()
 
 
-def create_account():
+def create account():
     name = input("Enter Account Holder Name: ")
     balance = float(input("Enter Initial Deposit: "))
     
@@ -25,7 +25,7 @@ def create_account():
 
 
 def deposit():
-    acc_no = int(input("Enter Account Number: "))
+    acc no = int(input("Enter Account Number: "))
     amount = float(input("Enter Deposit Amount: "))
     
     cursor.execute("UPDATE accounts SET balance = balance + ? WHERE acc_no = ?", (amount, acc_no))
@@ -34,7 +34,7 @@ def deposit():
 
 
 def withdraw():
-    acc_no = int(input("Enter Account Number: "))
+    acc no = int(input("Enter Account Number: "))
     amount = float(input("Enter Withdraw Amount: "))
     
     cursor.execute("SELECT balance FROM accounts WHERE acc_no = ?", (acc_no,))
